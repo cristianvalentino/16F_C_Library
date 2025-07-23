@@ -1,8 +1,11 @@
+#include <xc.h>
 #include "LCD1602.h"
 
-#define LCD_port_WR							LATD
-#define LCD_port_RD							PORTD
-#define LCD_port_DD							TRISD
+#define _XTAL_FREQ						32000000U
+
+#define LCD_port_WR						LATD
+#define LCD_port_RD						PORTD
+#define LCD_port_DD						TRISD
 
 #ifndef LCD_RS_SetHigh
 	#define LCD_RS_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)

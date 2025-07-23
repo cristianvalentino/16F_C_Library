@@ -1,4 +1,4 @@
-#include "../../system/system.h"
+#include "buzzer.h"
 
 const int8_t DiaSemTbl[7][10]={"DOMINGO  ","LUNES    ","MARTES   ","MIERCOLES","JUEVES   ","VIERNES  ","SABADO   "};
 

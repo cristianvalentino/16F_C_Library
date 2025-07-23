@@ -16,5 +16,5 @@
 
 
 void Keyboard_Paralelo(void);
-uint8_t Get_Keyboard_Paralelo(void);
+unsigned char Get_Keyboard_Paralelo(void);
 #endif

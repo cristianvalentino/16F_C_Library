@@ -1,4 +1,4 @@
-#include "../.X/mcc_generated_files/system/system.h"
+#include "i2c.h"
 
 
 #define BAUDRATE 400000UL

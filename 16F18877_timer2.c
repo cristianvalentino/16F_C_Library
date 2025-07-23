@@ -25,7 +25,6 @@ void TMR2_Initialize(void){
 	T2CONbits.TMR2ON = 1;							// Start Timer 2
 }
 
-
 //-------------------------------------------------------------------------------------------------
 // Ticks del timer
 // Returns the number of ticks since the last reset
@@ -33,6 +32,7 @@ void TMR2_Initialize(void){
 uint32_t Ticks(void){
 	return timer2_ticks;
 }
+
 //-------------------------------------------------------------------------------------------------
 // TMR2_ISR
 // Timer 2 Interrupt Service Routine

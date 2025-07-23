@@ -1,4 +1,5 @@
 #include "Display_I2C.h"
+#include "i2c.h"
 
 uint8_t backlight = 0;
 
@@ -57,8 +58,8 @@ void LCD_I2C_Init(void){
 	LCD_I2C_WriteCommand(0x02);									// Configurar en modo de 4 bits
 	LCD_I2C_WriteCommand(0x28);									// Configurar en modo de 2 l�neas y 5x8 puntos
 	LCD_I2C_WriteCommand(0x0C);									// Encender el display, sin cursor
-	LCD_I2C_WriteCommand(0x06);			// Incrementar el cursor
-	LCD_I2C_WriteCommand(0x01);			// Limpiar el display
+	LCD_I2C_WriteCommand(0x06);									// Incrementar el cursor
+	LCD_I2C_WriteCommand(0x01);									// Limpiar el display
 	__delay_ms(2);
 	LCD_I2C_Printf("LCD I2C Start !!");							// Imprime en la primera linea
 	LCD_I2C_Backligth_SetOn();

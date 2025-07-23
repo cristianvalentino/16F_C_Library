@@ -1,14 +1,27 @@
-#include "../CPUPIC16F18877.X/mcc_generated_files/system/system.h"
+#include <xc.h>
+#include "buzzer.h"
 
 
 #define		ENCODER_SOUND								3		// milisecond
 #define		KEY_SOUND									200		// milisecond
 #define		ERROR_SOUND									500		// milisecond
 
+#ifndef Buzzer_SetHigh
+	#define Buzzer_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
+	#define Buzzer_SetLow()             do { LATCbits.LATC3 = 0; } while(0)
+	#define Buzzer_SetDigitalMode()     do { ANSELCbits.ANSC3 = 0; } while(0)
+	#define Buzzer_SetDigitalOutput()   do { TRISCbits.TRISC3 = 0; } while(0)
+#endif
+
 struct {
 	uint32_t timeout;
 	uint8_t state;
 }buzzer;
+
+uint32_t Ticks(void){
+	
+}
+
 
 //-------------------------------------------------------------------------------------------------
 // Debe cargarse con los ticks de un timmer de 1 ms para que funcione 

@@ -1,5 +1,6 @@
 #include <xc.h>
 #include "keyboard_paralelo.h"
+#include "../mcc_generated_files/timer/tmr2.h"
 
 
 struct {
@@ -8,9 +9,7 @@ struct {
 	uint32_t debounce;
 }key;
 
-uint32_t Ticks(void ){
-	return 0;
-}
+
 
 uint8_t Get_Keyboard_Paralelo(void){
 	uint8_t k;

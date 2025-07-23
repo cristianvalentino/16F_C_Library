@@ -1,5 +1,6 @@
 #include <xc.h>
 #include "buzzer.h"
+#include "../mcc_generated_files/timer/tmr2.h"
 
 
 #define		ENCODER_SOUND								3		// milisecond
@@ -17,11 +18,6 @@ struct {
 	uint32_t timeout;
 	uint8_t state;
 }buzzer;
-
-uint32_t Ticks(void){
-	
-}
-
 
 //-------------------------------------------------------------------------------------------------
 // Debe cargarse con los ticks de un timmer de 1 ms para que funcione 

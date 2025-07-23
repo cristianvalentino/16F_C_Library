@@ -1,6 +1,6 @@
 #include <xc.h>
 #include "keyboard_paralelo.h"
-#include "16F8877_timer2.h"
+#include "../mcc_generated_files/timer/tmr2.h"
 
 
 struct {

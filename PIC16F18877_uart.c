@@ -1,6 +1,6 @@
 #include <xc.h>
 #include <stdint.h>
-#include "pic16F188xx_uart.h"
+#include "PIC16F18877_uart.h"
 
 //-------------------------------------------------------------------------------------------------
 //		Configuración del UART

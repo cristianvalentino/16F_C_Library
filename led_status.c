@@ -1,6 +1,7 @@
 #include <xc.h>
 #include "led_status.h"
-#include "16F18877_timer2.h"
+#include "../mcc_generated_files/timer/tmr2.h"
+
 
 #define _XTAL_FREQ 32000000U
 

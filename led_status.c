@@ -1,5 +1,6 @@
 #include <xc.h>
 #include "led_status.h"
+#include "16F18877_timer2.h"
 
 #define _XTAL_FREQ 32000000U
 
@@ -21,9 +22,6 @@ struct {
 	uint8_t state;
 }led_status;
 
-uint32_t Ticks (void){
-	return 0;
-}
 
 //-------------------------------------------------------------------------------------------------
 // Debe cargarse con los ticks de un timmer de 1 ms para que funcione 

@@ -1,5 +1,5 @@
 #include <xc.h>
-#include "16F18877_timer2.h"
+#include "PIC16F18877_timer2.h"
 
 uint32_t timer2_ticks = 0;
 

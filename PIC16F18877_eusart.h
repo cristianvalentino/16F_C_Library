@@ -1,0 +1,6 @@
+#ifndef PIC16F18877_EUSART_H
+#define PIC16F18877_EUSART_H
+
+	void Create_EUSART(void);
+
+#endif // PIC16F18877_EUSART_H

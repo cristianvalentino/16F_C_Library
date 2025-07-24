@@ -1,6 +1,6 @@
 #include <xc.h>
 #include "buzzer.h"
-#include "../pinout.h"
+#include "../bios.h"
 #include "PIC16F18877_interrupt.h"
 
 #define		ENCODER_SOUND								3		// milisecond

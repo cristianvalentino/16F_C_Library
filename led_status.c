@@ -1,6 +1,6 @@
 #include <xc.h>
 #include "led_status.h"
-#include "../pinout.h"
+#include "../bios.h"
 #include "PIC16F18877_interrupt.h"
 
 

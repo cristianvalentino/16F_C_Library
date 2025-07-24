@@ -1,5 +1,5 @@
 #include <xc.h>
-#include "../pinout.h"
+#include "../bios.h"
 #include "LCD1602.h"
 
 #define _XTAL_FREQ						32000000U

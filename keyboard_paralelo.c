@@ -1,5 +1,5 @@
 #include <xc.h>
-#include "../pinout.h"
+#include "../bios.h"
 #include "keyboard_paralelo.h"
 #include "PIC16F18877_interrupt.h"
 

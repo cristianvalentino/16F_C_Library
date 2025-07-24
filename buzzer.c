@@ -1,4 +1,5 @@
 #include <xc.h>
+#include "pinout.h"
 #include "buzzer.h"
 #include "../mcc_generated_files/timer/tmr2.h"
 
@@ -7,6 +8,9 @@
 #define		KEY_SOUND									200		// milisecond
 #define		ERROR_SOUND									500		// milisecond
 
+//-------------------------------------------------------------------------------------------------
+// Si no hay definiciones de pines para este modulo-> valores por defecto
+//-------------------------------------------------------------------------------------------------
 #ifndef Buzzer_SetHigh
 	#define Buzzer_SetHigh()            do { LATCbits.LATC3 = 1; } while(0)
 	#define Buzzer_SetLow()             do { LATCbits.LATC3 = 0; } while(0)

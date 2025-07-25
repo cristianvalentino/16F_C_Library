@@ -7,9 +7,7 @@
 //										TABLE 13-3: PPS OUTPUT SIGNAL ROUTING OPTIONS
 //-------------------------------------------------------------------------------------------------
 void Create_PWM6(volatile unsigned char *port){
-
-	if(*port != 0) 												// no redirecciona si el puerto = 0
-		*port = 0x0E;												// redireccionamiento de puertos
+	*port = 0x0E; 												// no redirecciona si el puerto = 0
 	PWM6CON = 0x0;												// PWMPOL active_hi; PWMEN disabled
 	PWM6DCH = 0x2;												// PWMDCH 2; 
 	PWM6DCL = 0x40;												// PWMDCL 1; 
@@ -49,8 +47,7 @@ void Start_PWM6(void) {
 //-------------------------------------------------------------------------------------------------
 void Create_PWM7(volatile unsigned char *port){
 
-	if(*port != 0) 												// no redirecciona si el puerto = 0
-		*port = 0x0F;											// redireccionamiento de puertos
+	*port = 0x0F;												// redireccionamiento de puertos
 	PWM7CON = 0x0;												// PWMPOL active_hi; PWMEN disabled
 	PWM7DCH = 0x2;												// PWMDCH 2; 
 	PWM7DCL = 0x40;												// PWMDCL 1; 

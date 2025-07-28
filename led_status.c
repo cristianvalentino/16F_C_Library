@@ -1,21 +1,13 @@
 #include <xc.h>
 #include "led_status.h"
-#include "../mcc_generated_files/timer/tmr2.h"
+#include "../bios.h"
+#include "PIC16F18877_interrupt.h"
 
 
 #define _XTAL_FREQ 32000000U
 
 #define INIT            0
 #define NORMAL			1
-
-#ifndef Status_Led_SetHigh
-	#define Status_Led_SetHigh()            do { LATCbits.LATC4 = 1; }	while(0)
-	#define Status_Led_SetLow()             do { LATCbits.LATC4 = 0; }	while(0)
-	#define Status_Led_SetDigitalMode()     do { ANSELCbits.ANSC4 = 0; } while(0)
-	#define Status_Led_SetDigitalOutput()   do { TRISCbits.TRISC4 = 0; } while(0)
-	#define Status_Led_GetValue()			PORTCbits.RC4
-#endif
-
 
 
 struct {

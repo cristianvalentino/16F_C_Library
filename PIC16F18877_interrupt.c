@@ -1,6 +1,5 @@
 #include <xc.h>
 #include "PIC16F18877_interrupt.h"
-#include "PIC16F18877_timer2.h"
 
 unsigned long timer2_ticks = 0;
 

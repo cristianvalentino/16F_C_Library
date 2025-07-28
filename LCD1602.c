@@ -1,32 +1,9 @@
 #include <xc.h>
+#include "../bios.h"
 #include "LCD1602.h"
 
 #define _XTAL_FREQ						32000000U
 
-#define LCD_port_WR						LATD
-#define LCD_port_RD						PORTD
-#define LCD_port_DD						TRISD
-
-#ifndef LCD_RS_SetHigh
-	#define LCD_RS_SetHigh()            do { LATCbits.LATC0 = 1; } while(0)
-	#define LCD_RS_SetLow()             do { LATCbits.LATC0 = 0; } while(0)
-	#define LCD_RS_SetDigitalMode()     do { ANSELCbits.ANSC0 = 0; } while(0)
-	#define LCD_RS_SetDigitalOutput()   do { TRISCbits.TRISC0 = 0; } while(0)
-#endif
-
-#ifndef LCD_RW_SetHigh
-	#define LCD_RW_SetHigh()            do { LATCbits.LATC1 = 1; } while(0)
-	#define LCD_RW_SetLow()             do { LATCbits.LATC1 = 0; } while(0)
-	#define LCD_RW_SetDigitalMode()     do { ANSELCbits.ANSC1 = 0; } while(0)
-	#define LCD_RW_SetDigitalOutput()   do { TRISCbits.TRISC1 = 0; } while(0)
-#endif
-
-#ifndef LCD_EN_SetHigh
-	#define LCD_EN_SetHigh()            do { LATCbits.LATC2 = 1; } while(0)
-	#define LCD_EN_SetLow()             do { LATCbits.LATC2 = 0; } while(0)
-	#define LCD_EN_SetDigitalMode()     do { ANSELCbits.ANSC2 = 0; } while(0)
-	#define LCD_EN_SetDigitalOutput()   do { TRISCbits.TRISC2 = 0; } while(0)
-#endif
 
 
 //-------------------------------------------------------------------------------------------------

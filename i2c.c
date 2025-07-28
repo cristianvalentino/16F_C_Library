@@ -1,5 +1,7 @@
+#include <xc.h>
 #include "i2c.h"
 
+#define _XTAL_FREQ				3200000UL						// Define system clock frequency
 
 #define BAUDRATE 400000UL
 #define I2C_BAUD    ((_XTAL_FREQ/(4UL*BAUDRATE))-1)
